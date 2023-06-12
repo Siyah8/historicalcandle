@@ -22,7 +22,7 @@ if not mt5.initialize():
 timezone = pytz.timezone("Etc/UTC")
 # create 'datetime' object in UTC time zone to avoid the implementation of a local time zone offset
 utc_from = datetime(2020, 1, 1, tzinfo=timezone)
-# get 10 EURUSD H4 bars starting from 01.10.2020 in UTC time zone
+# get data
 rates = mt5.copy_rates_from("EURUSD", mt5.TIMEFRAME_M15, utc_from, 100)
 
 mt5.shutdown()
